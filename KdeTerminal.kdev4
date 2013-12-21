@@ -1,0 +1,4 @@
+[Project]
+Name=KdeTerminal
+Manager=KDevCMakeManager
+VersionControl=kdevgit
