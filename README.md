@@ -1,4 +1,8 @@
 KdeTerminal
 ===========
 
-Testes diversos kdedevelop
+Curso de verão
+
+Introdução ao C++
+
+Prof. André Luiz Moreira
