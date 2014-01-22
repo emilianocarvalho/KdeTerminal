@@ -1,0 +1,4 @@
+KdeTerminal
+===========
+
+Testes diversos kdedevelop
