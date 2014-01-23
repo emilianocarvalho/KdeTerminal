@@ -125,6 +125,28 @@ void impares (void) {
           
 }
      
+void perfeitos (void) {
+    cout << "|||||||||||||||||||||||||||||||||||||||||||||" << endl;
+ 
+    int i, num, somaDiv;
+ 
+    cout << "Digite um número: ";
+    cin >> num;
+ 
+    for (i = 1; i < num; i++) {
+        if (num % 2 = 0) {
+           somaDiv = somaDiv + i;        
+        }                
+    }
+    
+    if (somaDiv = num) {
+        cout << "Numero PERFEITO" << endl;
+        
+    }
+    else
+       cout << "Nao eh PERFEITO" << endl;
+    
+}
 
 int main(int argc, char *argv[])
 {
@@ -152,7 +174,7 @@ int main(int argc, char *argv[])
                impares();
                break;
           case 4:
-               impares();
+               perfeitos();
                break;
           case 0:
                break;
