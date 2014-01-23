@@ -5,6 +5,7 @@
 using namespace std;
 
 void diversos (void) {
+    cout << "|||||||||||||||||||||||||||||||||||||||||||||" << endl;
     
     int res = 0, num1 = 5, num2 = 2, vlr;
 
@@ -46,6 +47,8 @@ void diversos (void) {
 }
 
 void meses (void){
+    cout << "|||||||||||||||||||||||||||||||||||||||||||||" << endl;
+
     int mes;
     cout << "Meses do ano ||||||||||>" << endl;
     cout << "digite de 1 a 12 ||||||>" << endl;
@@ -93,6 +96,36 @@ void meses (void){
     }        
 }
 
+void impares (void) {
+    cout << "|||||||||||||||||||||||||||||||||||||||||||||" << endl;
+
+    int maior=0, seq, num, cont=0;
+    
+    do {
+        cont++;
+        
+        cout << cont << " - Digite um número inteiro (Digite 0 para sair): ";
+        cin >> num;
+        
+        if (num % 2 != 0) 
+        {
+              if (num > maior) 
+              {
+                 maior = num;
+                 seq = cont;        
+              }     
+        }
+
+       
+    } while (num != 0);
+    
+    cout << "O maior impar é: " << maior << endl;
+    cout << "Na sequencia: " << seq << endl;
+    cout << "Total digitado: " << cont << endl;
+          
+}
+     
+
 int main(int argc, char *argv[])
 {
     int opcmnu;
@@ -103,6 +136,8 @@ int main(int argc, char *argv[])
         cout << "0 Sair             |||||||||||||" << endl;
         cout << "1 Diversos         |||||||||||||" << endl;
         cout << "2 Meses do Ano     |||||||||||||" << endl;
+        cout << "3 Numeros Impares  |||||||||||||" << endl;
+        cout << "4 Numero Perfeitos |||||||||||||" << endl;
     
         cin >> opcmnu;
     
@@ -112,6 +147,12 @@ int main(int argc, char *argv[])
                break;
           case 2:
                meses();
+               break;
+          case 3:
+               impares();
+               break;
+          case 4:
+               impares();
                break;
           case 0:
                break;
@@ -126,4 +167,3 @@ int main(int argc, char *argv[])
     
     return EXIT_SUCCESS;
 }
-
