@@ -4,6 +4,59 @@
 
 using namespace std;
 
+void diversos (void);
+void meses (void);
+void impares (void);
+void perfeitos (void);
+void fatorial (void);
+
+int main(int argc, char *argv[])
+{
+    int opcmnu;
+ 
+    while (opcmnu>0) {
+
+        cout << "Selecione a rotina |||||||||||||" << endl;
+        cout << "0 Sair             |||||||||||||" << endl;
+        cout << "1 Diversos         |||||||||||||" << endl;
+        cout << "2 Meses do Ano     |||||||||||||" << endl;
+        cout << "3 Numeros Impares  |||||||||||||" << endl;
+        cout << "4 Numero Perfeitos |||||||||||||" << endl;
+        cout << "5 Fatorial         |||||||||||||" << endl;
+    
+        cin >> opcmnu;
+    
+        switch (opcmnu) {
+          case 1:
+               diversos();
+               break;
+          case 2:
+               meses();
+               break;
+          case 3:
+               impares();
+               break;
+          case 4:
+               perfeitos();
+               break;
+          case 5:
+               fatorial();
+               break;
+          case 0:
+               break;
+          default:
+               cout << "digite de 1/2 ou 0 para sair"  << endl;
+               
+        }     
+        system("PAUSE");
+        system("cls");        
+
+    }
+    
+    return EXIT_SUCCESS;
+}
+
+
 void diversos (void) {
     cout << "|||||||||||||||||||||||||||||||||||||||||||||" << endl;
     
@@ -134,12 +187,12 @@ void perfeitos (void) {
     cin >> num;
  
     for (i = 1; i < num; i++) {
-        if (num % 2 = 0) {
+        if (num % 2 == 0) {
            somaDiv = somaDiv + i;        
         }                
     }
     
-    if (somaDiv = num) {
+    if (somaDiv == num) {
         cout << "Numero PERFEITO" << endl;
         
     }
@@ -148,44 +201,27 @@ void perfeitos (void) {
     
 }
 
-int main(int argc, char *argv[])
-{
-    int opcmnu;
- 
-    while (opcmnu>0) {
-
-        cout << "Selecione a rotina |||||||||||||" << endl;
-        cout << "0 Sair             |||||||||||||" << endl;
-        cout << "1 Diversos         |||||||||||||" << endl;
-        cout << "2 Meses do Ano     |||||||||||||" << endl;
-        cout << "3 Numeros Impares  |||||||||||||" << endl;
-        cout << "4 Numero Perfeitos |||||||||||||" << endl;
+void fatorial (void) {
+    cout << "|||||||||||||||||||||||||||||||||||||||||||||" << endl;
     
-        cin >> opcmnu;
+    int num;
+    long fat;
     
-        switch (opcmnu) {
-          case 1:
-               diversos();
-               break;
-          case 2:
-               meses();
-               break;
-          case 3:
-               impares();
-               break;
-          case 4:
-               perfeitos();
-               break;
-          case 0:
-               break;
-          default:
-               cout << "digite de 1/2 ou 0 para sair"  << endl;
-               
-        }     
-        system("PAUSE");
-        system("cls");        
-
+    cout << "Informe um número";
+    cin >> num;
+    
+    if (num == 0)
+       fat = 1;
+    else 
+    {
+         fat = num;
+         while (num > 1)
+         {
+               fat = fat * (num - 1);
+               num--;                              
+         }                   
     }
     
-    return EXIT_SUCCESS;
+    cout << "O fatorial eh " << fat << endl;         
+    
 }
