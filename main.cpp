@@ -12,6 +12,8 @@ void fatorial (void);
 void fatorialR (void);
 
 long fatR(int num);
+void calcmedia(void);
+double Media(double n1, double n2);
 
 int main(int argc, char *argv[])
 {
@@ -27,6 +29,7 @@ int main(int argc, char *argv[])
         cout << "4 Numero Perfeitos |||||||||||||" << endl;
         cout << "5 Fatorial         |||||||||||||" << endl;
         cout << "6 Fatorial Recursiva |||||||||||" << endl;
+        cout << "7 Media            |||||||||||||" << endl;
         
         cin >> opcmnu;
     
@@ -48,6 +51,9 @@ int main(int argc, char *argv[])
                break;
           case 6:
                fatorialR();
+               break;
+          case 7:
+               calcmedia();
                break;
           case 0:
                break;
@@ -251,3 +257,20 @@ long fatR(int num) {
      return num * fatR(num-1);        
 }
 
+void calcmedia (void) {
+    cout << "|||||||||||||||||||||||||||||||||||||||||||||" << endl;
+
+    double num, num2;
+     
+    cout << "digite dois números reais ";
+    cin >> num >> num2;
+    
+    cout << "A media é : " << Media(num, num2) << endl;
+          
+}
+
+double Media(double n1, double n2) {
+     double media;
+     media = (n1 + n2) / 2;
+     return media;      
+}
