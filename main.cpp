@@ -9,6 +9,9 @@ void meses (void);
 void impares (void);
 void perfeitos (void);
 void fatorial (void);
+void fatorialR (void);
+
+long fatR(int num);
 
 int main(int argc, char *argv[])
 {
@@ -23,7 +26,8 @@ int main(int argc, char *argv[])
         cout << "3 Numeros Impares  |||||||||||||" << endl;
         cout << "4 Numero Perfeitos |||||||||||||" << endl;
         cout << "5 Fatorial         |||||||||||||" << endl;
-    
+        cout << "6 Fatorial Recursiva |||||||||||" << endl;
+        
         cin >> opcmnu;
     
         switch (opcmnu) {
@@ -41,6 +45,9 @@ int main(int argc, char *argv[])
                break;
           case 5:
                fatorial();
+               break;
+          case 6:
+               fatorialR();
                break;
           case 0:
                break;
@@ -207,7 +214,7 @@ void fatorial (void) {
     int num;
     long fat;
     
-    cout << "Informe um número";
+    cout << "Informe um número ";
     cin >> num;
     
     if (num == 0)
@@ -225,3 +232,22 @@ void fatorial (void) {
     cout << "O fatorial eh " << fat << endl;         
     
 }
+
+void fatorialR (void) {
+    cout << "|||||||||||||||||||||||||||||||||||||||||||||" << endl;
+
+    int num;
+    long fat;
+     
+    cout << "Informe um número ";
+    cin >> num;
+
+    cout << "O fatorial eh " << fatR(num) << endl;    
+}
+
+long fatR(int num) {
+     if (num == 0)
+        return 1;
+     return num * fatR(num-1);        
+}
+
